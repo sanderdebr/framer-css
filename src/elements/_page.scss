@@ -1,0 +1,23 @@
+/*  =======================================================================
+    Elements > Page
+    ======================================================================= */
+
+html {
+  font-family: $font-family-primary;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-style: $font-style;
+  font-variant: $font-variant;
+  font-weight: $font-weight;
+  line-height: $line-height;
+}
+
+body {
+  color: $color-primary;
+  font-size: $font-size;
+}
+
+*::selection {
+  background: $color-secondary;
+  color: $color-accent;
+}

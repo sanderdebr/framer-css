@@ -1,0 +1,32 @@
+{
+  "name": "framer-css",
+  "version": "1.0.0",
+  "description": "(S)CSS framework",
+  "main": "index.js",
+  "scripts": {
+    "lint": "stylelint \"**/*.scss\"",
+    "sass:watch": "sass --watch --style compressed src/main.scss dist/framer.min.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sanderdebr/framer-css.git"
+  },
+  "keywords": [
+    "css",
+    "scss"
+  ],
+  "author": "Sander de Bruijn",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sanderdebr/framer-css/issues"
+  },
+  "homepage": "https://github.com/sanderdebr/framer-css#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "sass": "^1.32.8",
+    "stylelint": "^13.12.0",
+    "stylelint-config-prettier": "^8.0.2",
+    "stylelint-config-sass-guidelines": "^8.0.0",
+    "stylelint-config-standard": "^21.0.0"
+  }
+}
