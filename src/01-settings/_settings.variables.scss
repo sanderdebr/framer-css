@@ -22,10 +22,12 @@ $breakpoints: (
 /*  Global colors
     ======================================================================= */
 
-$color-primary: #222 !default;
-$color-secondary: #bbcde5 !default;
-$color-accent: #0057ff !default;
-$color-white: #fff !default;
+$colors: (
+  primary: #222,
+  secondary: #bbcde5,
+  accent: #0057ff,
+  white: #fff,
+) !default;
 
 /*  Typography
     ======================================================================= */
@@ -41,7 +43,7 @@ $font-variant: normal !default;
 $font-weight: $font-weight-regular;
 $font-family-primary: "Work Sans", sans-serif !default;
 $font-family-secondary: "Crimson Text", serif !default;
-$font-color: $color-primary !default;
+$font-color: map-get($colors, "primary") !default;
 $line-height: 1.6 !default;
 
 // Headings

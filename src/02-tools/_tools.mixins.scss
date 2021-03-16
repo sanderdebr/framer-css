@@ -28,7 +28,7 @@
   1. Fallback for pixels
     ======================================================================= */
 
-@mixin framer-font-size($font-size) {
+@mixin pixel-to-rem($font-size) {
   font-size: $font-size; /* [1] */
   font-size: pixelToRem($font-size);
 }

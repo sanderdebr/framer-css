@@ -13,25 +13,25 @@ h6 {
 }
 
 h1 {
-  @include framer-font-size($h1);
+  @include pixel-to-rem($h1);
 }
 
 h2 {
-  @include framer-font-size($h2);
+  @include pixel-to-rem($h2);
 }
 
 h3 {
-  @include framer-font-size($h3);
+  @include pixel-to-rem($h3);
 }
 
 h4 {
-  @include framer-font-size($h4);
+  @include pixel-to-rem($h4);
 }
 
 h5 {
-  @include framer-font-size($h5);
+  @include pixel-to-rem($h5);
 }
 
 h5 {
-  @include framer-font-size($h6);
+  @include pixel-to-rem($h6);
 }

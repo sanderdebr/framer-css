@@ -10,6 +10,16 @@
   margin-right: auto;
 }
 
+.o-container--medium {
+  @extend .o-container;
+  max-width: $medium;
+}
+
+.o-container--small {
+  @extend .o-container;
+  max-width: $small;
+}
+
 .o-container--fluid {
   @extend .o-container;
   max-width: 100%;

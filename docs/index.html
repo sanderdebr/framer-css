@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="../dist/framer.min.css" />
+    <link rel="stylesheet" href="./css/prism.css" />
+    <link rel="stylesheet" href="./css/custom.css" />
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link
       href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Work+Sans:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap"
@@ -12,13 +14,38 @@
     />
   </head>
   <body>
-    <main class="o-container">
-      <h1>h1</h1>
-      <h2>h2</h2>
-      <h3>h3</h3>
-      <h4>h4</h4>
-      <h5>h5</h5>
+    <main class="o-container--small bg-primary">
+      <section id="getting-started">
+        <article>
+          <h1>Framer CSS</h1>
+          <p>
+            Framer is a minimalist Sass boilerplate that provides helpful,
+            browser-consistent styling for default HTML elements - buttons,
+            forms, tables, lists, and typography.
+          </p>
+        </article>
+      </section>
+
+      <section id="containers">
+        <article>
+          <h2>Containers</h2>
+          <p>
+            There are three container sizes for content that are centered with
+            left and right padding. Content without a container will span the
+            width of the viewport.
+          </p>
+          <pre>
+            <code class="language-css">
+            <div class="small-container">Small</div>
+            <div class="medium-container">Medium</div>
+            <div class="container">Large</div>
+            </code>
+          </pre>
+        </article>
+      </section>
+
       <a href="#">A random link</a>
     </main>
+    <script src="prism.js"></script>
   </body>
 </html>
