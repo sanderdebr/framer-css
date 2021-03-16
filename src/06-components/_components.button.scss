@@ -1,0 +1,53 @@
+/*  =======================================================================
+    Components > Button
+    ======================================================================= */
+
+%c-button {
+  border: 0;
+  border-radius: $button-border-radius;
+  cursor: pointer;
+  display: inline-block;
+  line-height: 1;
+  outline: none;
+  padding: $button-padding;
+  text-align: center;
+  transition: $button-transition;
+}
+
+@each $button in $buttons {
+  #{$button} {
+    @extend %c-button;
+
+    &--primary {
+      background: $button-primary-background;
+      color: $button-primary-color;
+
+      &:hover,
+      &:focus,
+      &:active {
+        background-color: darken($button-primary-background, 17.5%);
+      }
+    }
+
+    &--secondary {
+      background: $button-secondary-background;
+      color: $button-secondary-color;
+
+      &:hover,
+      &:focus,
+      &:active {
+        background-color: darken($button-secondary-background, 17.5%);
+      }
+    }
+
+    &--disabled {
+      background: $button-disabled-background;
+      color: $button-disabled-color;
+    }
+
+    &--full {
+      display: block;
+      width: 100%;
+    }
+  }
+}

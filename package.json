@@ -4,7 +4,7 @@
   "description": "(S)CSS framework",
   "main": "index.js",
   "scripts": {
-    "lint": "stylelint \"**/*.scss\"",
+    "lint": "stylelint \"**/*.scss\" --fix",
     "sass:watch": "sass --watch --style compressed src/main.scss dist/framer.min.css"
   },
   "repository": {

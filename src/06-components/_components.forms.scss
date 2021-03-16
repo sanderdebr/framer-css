@@ -1,0 +1,17 @@
+/*  =======================================================================
+    Components > Forms
+    ======================================================================= */
+
+%c-forms {
+  border-radius: $border-radius;
+  display: block;
+  line-height: 1;
+  outline: none;
+  padding: $forms-padding;
+}
+
+@each $form in $forms {
+  #{$form} {
+    @extend %c-forms;
+  }
+}

@@ -17,7 +17,7 @@
 /*  03. Generic
     ======================================================================= */
 
-@import "./03-generic/generic.normalize";
+@import "./03-generic/generic.reset";
 
 /*  04. Elements
     ======================================================================= */
@@ -30,6 +30,15 @@
     ======================================================================= */
 
 @import "./05-objects/objects.container";
+@import "./05-objects/objects.layout";
 
 /*  06. Components
     ======================================================================= */
+
+@import "./06-components/components.button";
+@import "./06-components/components.forms";
+
+/*  07. Utilities
+    ======================================================================= */
+
+@import "./07-utilities/utilities.helpers";

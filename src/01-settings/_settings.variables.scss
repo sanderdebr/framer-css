@@ -24,9 +24,10 @@ $breakpoints: (
 
 $colors: (
   primary: #222,
-  secondary: #bbcde5,
+  secondary: #f3f8ff,
   accent: #0057ff,
   white: #fff,
+  gray: "#eee",
 ) !default;
 
 /*  Typography
@@ -47,7 +48,7 @@ $font-color: map-get($colors, "primary") !default;
 $line-height: 1.6 !default;
 
 // Headings
-$heading-font-weight: $font-weight-bold;
+$heading-font-weight: $font-weight-bold !default;
 $heading-line-height: 1.2 !default;
 
 $h1: 36px !default;
@@ -61,3 +62,36 @@ $h6: 16px !default;
     ======================================================================= */
 
 $padding: 1rem !default;
+
+/*  Borders
+    ======================================================================= */
+
+$border-radius: 5rem !default;
+
+/*  Buttons
+    ======================================================================= */
+
+$buttons: (".c-button, a.c-button, button") !default;
+
+$button-border-radius: $border-radius;
+$button-padding: 1rem 1.5rem;
+
+$button-primary-background: map-get($colors, "accent") !default;
+$button-primary-color: white !default;
+
+$button-secondary-background: map-get($colors, "secondary") !default;
+$button-secondary-color: map-get($colors, "accent") !default;
+
+$button-disabled-background: map-get($colors, "gray") !default;
+$button-disabled-color: map-get($colors, "primary") !default;
+
+$button-transition: all 300ms ease-in-out !default;
+
+/*  Forms
+    ======================================================================= */
+
+$forms: (
+  ".c-forms, [type=color], [type=date], [type=datetime], [type=datetime-local], [type=email], [type=month], [type=number], [type=password], [type=search], [type=tel], [type=text], [type=url], [type=week], [type=time], select, textarea"
+) !default;
+
+$forms-padding: 0.75rem;

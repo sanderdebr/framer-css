@@ -1,0 +1,15 @@
+/*  =======================================================================
+    Generic > Reset
+    A thin layer on top of normalize.css
+    ======================================================================= */
+
+html {
+  box-sizing: border-box;
+  min-height: 100%;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
