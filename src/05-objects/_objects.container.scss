@@ -1,0 +1,16 @@
+/*  =======================================================================
+    Objects > Container
+    ======================================================================= */
+
+.o-container {
+  max-width: $large;
+  padding-left: $padding;
+  padding-right: $padding;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.o-container--fluid {
+  @extend .o-container;
+  max-width: 100%;
+}

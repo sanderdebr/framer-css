@@ -1,0 +1,37 @@
+/*  =======================================================================
+    Elements > Headings
+    ======================================================================= */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: $heading-font-weight;
+  line-height: $heading-line-height;
+}
+
+h1 {
+  @include framer-font-size($h1);
+}
+
+h2 {
+  @include framer-font-size($h2);
+}
+
+h3 {
+  @include framer-font-size($h3);
+}
+
+h4 {
+  @include framer-font-size($h4);
+}
+
+h5 {
+  @include framer-font-size($h5);
+}
+
+h5 {
+  @include framer-font-size($h6);
+}

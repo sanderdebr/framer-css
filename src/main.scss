@@ -3,30 +3,33 @@
     (S)CSS Framework
     ======================================================================= */
 
-/*  Settings
+/*  01. Settings
     ======================================================================= */
 
-@import "./settings/variables";
+@import "./01-settings/settings.variables";
 
-/*  Tools
+/*  02. Tools
     ======================================================================= */
 
-@import "./tools/mixins";
+@import "./02-tools/tools.functions";
+@import "./02-tools/tools.mixins";
 
-/*  Generic
+/*  03. Generic
     ======================================================================= */
 
-@import "./generic/normalize";
+@import "./03-generic/generic.normalize";
 
-/*  Elements
+/*  04. Elements
     ======================================================================= */
 
-@import "./elements/page";
-@import "./elements/headings";
-@import "./elements/links";
+@import "./04-elements/elements.page";
+@import "./04-elements/elements.headings";
+@import "./04-elements/elements.links";
 
-/*  Objects
+/*  05. Objects
     ======================================================================= */
 
-/*  Components
+@import "./05-objects/objects.container";
+
+/*  06. Components
     ======================================================================= */

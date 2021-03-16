@@ -9,7 +9,6 @@ $x-small: 640px !default;
 $small: 768px !default;
 $medium: 980px !default;
 $large: 1280px !default;
-$x-large: 1920px !default;
 
 /*  Breakpoints
     ======================================================================= */
@@ -20,20 +19,21 @@ $breakpoints: (
   desktop: $medium,
 ) !default;
 
-/*  Colors
+/*  Global colors
     ======================================================================= */
 
-$color-primary: #222;
-$color-secondary: #bbcde5;
-$color-accent: #0057ff;
-$color-white: #fff;
+$color-primary: #222 !default;
+$color-secondary: #bbcde5 !default;
+$color-accent: #0057ff !default;
+$color-white: #fff !default;
 
 /*  Typography
     ======================================================================= */
 
-$font-weight-light: 300;
-$font-weight-regular: 400;
-$font-weight-bold: 700;
+// Body
+$font-weight-light: 300 !default;
+$font-weight-regular: 400 !default;
+$font-weight-bold: 700 !default;
 
 $font-size: 1rem !default;
 $font-style: normal !default;
@@ -41,17 +41,21 @@ $font-variant: normal !default;
 $font-weight: $font-weight-regular;
 $font-family-primary: "Work Sans", sans-serif !default;
 $font-family-secondary: "Crimson Text", serif !default;
-$font-color: $color-primary;
+$font-color: $color-primary !default;
 $line-height: 1.6 !default;
 
-$h1-mobile: 1.75rem !default;
-$h2-mobile: 1.5rem !default;
-$h3-mobile: 1.25rem !default;
-$h4-mobile: 1.1rem !default;
-$h5-mobile: 1rem !default;
+// Headings
+$heading-font-weight: $font-weight-bold;
+$heading-line-height: 1.2 !default;
 
-$h1: 2.25rem !default;
-$h2: 2rem !default;
-$h3: 1.75rem !default;
-$h4: 1.5rem !default;
-$h5: 1.25rem !default;
+$h1: 36px !default;
+$h2: 28px !default;
+$h3: 24px !default;
+$h4: 20px !default;
+$h5: 18px !default;
+$h6: 16px !default;
+
+/*  Spacing
+    ======================================================================= */
+
+$padding: 1rem !default;

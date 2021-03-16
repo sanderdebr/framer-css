@@ -22,3 +22,13 @@
     @content;
   }
 }
+
+/*  Font size
+  Generates a rem font size from pixels
+  1. Fallback for pixels
+    ======================================================================= */
+
+@mixin framer-font-size($font-size) {
+  font-size: $font-size; /* [1] */
+  font-size: pixelToRem($font-size);
+}
