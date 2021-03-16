@@ -18,7 +18,7 @@
   #{$button} {
     @extend %c-button;
 
-    &--primary {
+    &.c-button--primary {
       background: $button-primary-background;
       color: $button-primary-color;
 
@@ -29,7 +29,7 @@
       }
     }
 
-    &--secondary {
+    &.c-button--secondary {
       background: $button-secondary-background;
       color: $button-secondary-color;
 
@@ -40,12 +40,12 @@
       }
     }
 
-    &--disabled {
+    &.c-button--disabled {
       background: $button-disabled-background;
       color: $button-disabled-color;
     }
 
-    &--full {
+    &.c-button--full {
       display: block;
       width: 100%;
     }

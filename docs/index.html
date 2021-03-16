@@ -215,7 +215,7 @@
             </code></pre>
 
           <form>
-            <div class="o-flex">
+            <div class="o-flex margin-bottom">
               <div class="o-flex__item o-flex__item--half">
                 <label for="name">Your email</label>
                 <input
@@ -233,18 +233,50 @@
                 </select>
               </div>
             </div>
-            <div class="o-flex">
+            <div class="o-flex margin-bottom">
               <div class="o-flex__item">
                 <label for="message">Message</label>
                 <textarea id="message"></textarea>
               </div>
             </div>
             <div class="o-flex">
-              <input type="submit" value="Submit" />
+              <button class="c-button c-button--primary" type="submit">
+                Submit
+              </button>
               <label>
                 <input type="checkbox" />
                 Remember me
               </label>
+            </div>
+          </form>
+        </article>
+        <article>
+          <h3>From validation</h3>
+          <p>
+            For a successful action you can use the
+            <code>c-forms--success</code> class. If there are errors, you may
+            use <code>c-forms--error</code>.
+          </p>
+          <form>
+            <div class="o-flex margin-bottom">
+              <div class="o-flex__item o-flex__item--half">
+                <label for="name">Your name</label>
+                <input
+                  type="text"
+                  id="name"
+                  placeholder="Enter your name here.."
+                  class="c-forms--success"
+                />
+              </div>
+              <div class="o-flex__item o-flex__item--half">
+                <label for="name">Your email</label>
+                <input
+                  type="email"
+                  id="email"
+                  placeholder="Enter your email here.."
+                  class="c-forms--error"
+                />
+              </div>
             </div>
           </form>
         </article>

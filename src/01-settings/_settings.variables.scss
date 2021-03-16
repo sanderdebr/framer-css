@@ -27,7 +27,9 @@ $colors: (
   secondary: #f3f8ff,
   accent: #0057ff,
   white: #fff,
-  gray: "#eee",
+  gray: #eee,
+  error: #d33c40,
+  success: #29de7d,
 ) !default;
 
 /*  Typography
@@ -61,23 +63,32 @@ $h6: 16px !default;
 /*  Spacing
     ======================================================================= */
 
-$padding: 1rem !default;
+$spacing: 1rem !default;
+
+/*  Animation
+    ======================================================================= */
+
+$transition: all 300ms ease-in-out !default;
 
 /*  Borders
     ======================================================================= */
 
-$border-radius: 5rem !default;
+$border-color: map-get($colors, "primary");
+$border-radius: 4px !default;
+$border-radius-large: 5rem !default;
 
 /*  Buttons
     ======================================================================= */
 
-$buttons: (".c-button, a.c-button, button") !default;
+$buttons: (
+  ".c-button, a.c-button, button, [type=submit], [type=reset], [type=button]"
+) !default;
 
-$button-border-radius: $border-radius;
+$button-border-radius: $border-radius-large;
 $button-padding: 1rem 1.5rem;
 
 $button-primary-background: map-get($colors, "accent") !default;
-$button-primary-color: white !default;
+$button-primary-color: map-get($colors, "white") !default;
 
 $button-secondary-background: map-get($colors, "secondary") !default;
 $button-secondary-color: map-get($colors, "accent") !default;
@@ -85,7 +96,7 @@ $button-secondary-color: map-get($colors, "accent") !default;
 $button-disabled-background: map-get($colors, "gray") !default;
 $button-disabled-color: map-get($colors, "primary") !default;
 
-$button-transition: all 300ms ease-in-out !default;
+$button-transition: $transition;
 
 /*  Forms
     ======================================================================= */
@@ -94,4 +105,8 @@ $forms: (
   ".c-forms, [type=color], [type=date], [type=datetime], [type=datetime-local], [type=email], [type=month], [type=number], [type=password], [type=search], [type=tel], [type=text], [type=url], [type=week], [type=time], select, textarea"
 ) !default;
 
-$forms-padding: 0.75rem;
+$forms-padding: $spacing;
+$forms-transition: $transition;
+$forms-border: 1px solid lighten($border-color, 80%) !default;
+$forms-border-error: 1px solid map-get($colors, "error") !default;
+$forms-border-success: 1px solid map-get($colors, "success") !default;

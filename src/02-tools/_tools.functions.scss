@@ -2,7 +2,14 @@
     Tools > Functions
     ======================================================================= */
 
-/*  Pixel to rem
+/*  Retrieve a color
+    ======================================================================= */
+
+@function color($color) {
+  @return map-get($colors, $color);
+}
+
+/*  Convert pixels to rem
     ======================================================================= */
 
 @function pixelToRem($pixel) {

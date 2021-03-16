@@ -3,11 +3,25 @@
     ======================================================================= */
 
 %c-forms {
+  border: $forms-border;
   border-radius: $border-radius;
   display: block;
   line-height: 1;
   outline: none;
   padding: $forms-padding;
+  transition: $forms-transition;
+
+  &.c-forms--error {
+    border: $forms-border-error;
+  }
+
+  &.c-forms--success {
+    border: $forms-border-success;
+  }
+
+  &:hover {
+    border-color: lighten($border-color, 50%);
+  }
 }
 
 @each $form in $forms {
