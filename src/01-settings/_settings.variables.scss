@@ -24,12 +24,12 @@ $breakpoints: (
 
 $colors: (
   primary: #2e3440,
-  secondary: #d8dee9,
+  secondary: #8fbcbb,
   accent: #5e81ac,
   error: #bf616a,
   success: #a3be8c,
-  porcelain: #eceff4,
-  fog: #e5e9f0,
+  snowstorm: #d8dee9,
+  smokewhite: #ffffff,
 ) !default;
 
 /*  Typography
@@ -60,6 +60,6 @@ $transition: all 300ms ease-in-out !default;
 /*  Borders
     ======================================================================= */
 
-$border-color: map-get($colors, "secondary");
+$border-color: map-get($colors, "snowstorm");
 $border-radius: 4px !default;
 $border-radius-large: 5rem !default;

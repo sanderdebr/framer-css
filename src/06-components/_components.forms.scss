@@ -15,8 +15,10 @@ $forms-border: 1px solid $border-color !default;
 $forms-border-error: 1px solid map-get($colors, "error") !default;
 $forms-border-success: 1px solid map-get($colors, "success") !default;
 
-$forms-box-shadow-error: 0px 3px 15px map-get($colors, "error");
-$forms-box-shadow-success: 0px 3px 15px map-get($colors, "success");
+$forms-box-shadow-error: 0 3px 15px lighten(map-get($colors, "error"), 25%);
+$forms-box-shadow-error-hover: 0 3px 15px map-get($colors, "error");
+$forms-box-shadow-success: 0 3px 15px lighten(map-get($colors, "success"), 25%);
+$forms-box-shadow-success-hover: 0 3px 15px map-get($colors, "success");
 
 /*  Module
     ======================================================================= */
@@ -30,14 +32,26 @@ $forms-box-shadow-success: 0px 3px 15px map-get($colors, "success");
   padding: $forms-padding;
   transition: $forms-transition;
 
+  &:hover {
+    border-color: darken($border-color, 15%);
+  }
+
   &.c-forms--error {
     border: $forms-border-error;
     box-shadow: $forms-box-shadow-error;
+
+    &:hover {
+      box-shadow: $forms-box-shadow-error-hover;
+    }
   }
 
   &.c-forms--success {
     border: $forms-border-success;
     box-shadow: $forms-box-shadow-success;
+
+    &:hover {
+      box-shadow: $forms-box-shadow-success-hover;
+    }
   }
 }
 

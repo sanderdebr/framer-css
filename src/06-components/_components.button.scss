@@ -14,13 +14,13 @@ $button-padding: 1rem 1.5rem;
 $button-transition: $transition;
 
 $button-primary-background: map-get($colors, "accent") !default;
-$button-primary-color: map-get($colors, "porcelain") !default;
+$button-primary-color: map-get($colors, "smokewhite") !default;
 
 $button-secondary-background: map-get($colors, "secondary") !default;
-$button-secondary-color: map-get($colors, "accent") !default;
+$button-secondary-color: map-get($colors, "smokewhite") !default;
 
-$button-disabled-background: map-get($colors, "fog") !default;
-$button-disabled-color: map-get($colors, "primary") !default;
+$button-disabled-background: map-get($colors, "snowstorm") !default;
+$button-disabled-color: map-get($colors, "snowstorm") !default;
 
 /*  Module
     ======================================================================= */
@@ -64,7 +64,7 @@ $button-disabled-color: map-get($colors, "primary") !default;
     }
 
     &.c-button--disabled {
-      background: $button-disabled-background;
+      background: lighten($button-disabled-background, 10%);
       color: $button-disabled-color;
     }
 
