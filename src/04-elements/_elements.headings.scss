@@ -7,6 +7,7 @@
 
 $heading-font-weight: $font-weight-bold !default;
 $heading-line-height: 1.2 !default;
+$heading-letter-spacing: -0.05rem !default;
 
 $h1: 36px !default;
 $h2: 28px !default;
@@ -26,6 +27,7 @@ h5,
 h6 {
   font-weight: $heading-font-weight;
   line-height: $heading-line-height;
+  letter-spacing: $heading-letter-spacing;
 
   &:first-child {
     margin-top: 0;
