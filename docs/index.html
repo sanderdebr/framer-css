@@ -3,24 +3,34 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Framer CSS</title>
+    <!-- External stylesheets -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.1/styles/default.min.css"
+      integrity="sha512-kZqGbhf9JTB4bVJ0G8HCkqmaPcRgo88F0dneK30yku5Y/dep7CZfCnNml2Je/sY4lBoqoksXz4PtVXS4GHSUzQ=="
+      crossorigin="anonymous"
+    />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
       integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="../dist/framer.min.css" />
-    <link rel="stylesheet" href="./css/custom.css" />
 
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link
       href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Work+Sans:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap"
       rel="stylesheet"
     />
+
+    <!-- Internal stylesheets -->
+    <link rel="stylesheet" href="../dist/framer.min.css" />
+    <link rel="stylesheet" href="./css/custom.css" />
   </head>
   <body>
     <main class="o-container o-container--small bg-primary">
+      <!-- 🚩 Getting started -->
       <section id="getting-started">
         <article>
           <h1>Framer CSS</h1>
@@ -103,6 +113,7 @@
         </article>
       </section>
 
+      <!-- 🚩 Typography -->
       <section id="typography">
         <article>
           <h2>Typography</h2>
@@ -178,6 +189,7 @@
         </article>
       </section>
 
+      <!-- 🚩 Forms -->
       <section id="forms">
         <article>
           <h2>Forms</h2>
@@ -186,33 +198,43 @@
             cross-browser so inputs can be stacked or placed alongside each
             other.
           </p>
-          <pre>
-            <code>
-<form>
-  <div class="o-flex">
-    <div class="o-flex__item--half o-flex__item--padded">
-    <label for="name">Your email</label>
-    <input type="email" id="email" placeholder="Enter your email here..">
-  </div>
-  <div class="o-flex__item--half o-flex__item--padded">
-
-    <label for="choose">Reason for contact</label>
-    <select id="choose">
-      <option disabled selected>Please select</option>
-      <option value="option-1">Option 1</option>
-      <option value="option-2">Option 2</option>
-    </select>
-  </div>
-  </div>
-  <label for="message">Message</label>
-  <textarea id="message"></textarea>
-  <label>
-    <input type="checkbox">
+          <pre><code class="html">
+&lt;form>
+&lt;div class="o-flex margin-bottom">
+  &lt;div class="o-flex__item o-flex__item--half">
+    &lt;label for="name">Your email&lt;/label>
+    &lt;input
+      type="email"
+      id="email"
+      placeholder="Enter your email here.."
+    />
+  &lt;/div>
+  &lt;div class="o-flex__item o-flex__item--half">
+    &lt;label for="choose">Reason for contact&lt;/label>
+    &lt;select id="choose">
+      &lt;option disabled selected>Please select&lt;/option>
+      &lt;option value="option-1">Option 1&lt;/option>
+      &lt;option value="option-2">Option 2&lt;/option>
+    &lt;/select>
+  &lt;/div>
+&lt;/div>
+&lt;div class="o-flex margin-bottom">
+  &lt;div class="o-flex__item">
+    &lt;label for="message">Message&lt;/label>
+    &lt;textarea id="message">&lt;/textarea>
+  &lt;/div>
+&lt;/div>
+&lt;div class="o-flex">
+  &lt;button class="c-button c-button--primary" type="submit">
+    Submit
+  &lt;/button>
+  &lt;label>
+    &lt;input type="checkbox" />
     Remember me
-  </label>
-  <input type="submit" value="Submit">
-</form>
-            </code></pre>
+  &lt;/label>
+&lt;/div>
+&lt;/form>
+          </code></pre>
 
           <form>
             <div class="o-flex margin-bottom">
@@ -282,20 +304,82 @@
         </article>
       </section>
 
+      <!-- 🚩 Tables -->
+      <section id="tables">
+        <article>
+          <h2>Tables</h2>
+          <p>
+            Be sure to use properly formed table markup with
+            <code>
+              <xmp><thead></thead></xmp>
+            </code>
+            and
+            <code>
+              <xmp><tbody></tbody></xmp>
+            </code>
+            when building a table.
+          </p>
+          <pre>
+            <code>
+code
+            </code></pre>
+          <button class="c-button c-button--primary">Primary button</button>
+          <input
+            class="c-button c-button--primary"
+            type="submit"
+            value="Submit"
+          />
+          <a class="c-button c-button--primary">Link</a>
+        </article>
+
+        <article>
+          <h3>Secondary buttons</h3>
+          <button class="c-button c-button--secondary">Secondary button</button>
+          <input
+            class="c-button c-button--secondary"
+            type="submit"
+            value="Submit"
+          />
+          <a class="c-button c-button--secondary">Link</a>
+        </article>
+
+        <article>
+          <h3>Disabled buttons</h3>
+          <button class="c-button c-button--disabled">Disabled button</button>
+          <input
+            class="c-button c-button--disabled"
+            type="submit"
+            value="Submit"
+          />
+          <a class="c-button c-button--disabled">Link</a>
+        </article>
+
+        <article>
+          <h3>Full width buttons</h3>
+          <button class="c-button c-button--primary c-button--full">
+            Button
+          </button>
+          <input
+            class="c-button c-button--primary c-button--full"
+            type="submit"
+            value="Submit"
+          />
+          <a class="c-button c-button--primary c-button--full">Link</a>
+        </article>
+      </section>
+
       <a href="#">A random link</a>
     </main>
 
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.1/highlight.min.js"
+      integrity="sha512-d00ajEME7cZhepRqSIVsQVGDJBdZlfHyQLNC6tZXYKTG7iwcF8nhlFuppanz8hYgXr8VvlfKh4gLC25ud3c90A=="
+      crossorigin="anonymous"
+    ></script>
+
     <script>
-      // Converts code blocks to plain text
-      function convertCodeToText() {
-        const codeBlocks = document.querySelectorAll("code");
-
-        for (let i = 0; i < codeBlocks.length; i++) {
-          codeBlocks[i].innerText = codeBlocks[i].innerHTML;
-        }
-      }
-
-      convertCodeToText();
+      console.log(hljs);
+      hljs.highlightAll();
     </script>
   </body>
 </html>

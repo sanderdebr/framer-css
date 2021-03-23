@@ -10,12 +10,8 @@ article {
   margin-bottom: 3rem;
 }
 
-pre {
-  background-color: #fbfbfb;
-}
-
-code {
-  color: #0057ff;
+xmp {
+  display: inline;
 }
 
 .c-button {
