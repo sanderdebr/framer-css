@@ -2,4 +2,6 @@
 
 An easy-to-use (S)CSS framework for developing web apps.
 
-* Applies ITCSS architecture & BEMCSS naming conventions.
+*  ITCSS architecture
+*  BEMCSS naming conventions
+*  Nord theme color palette
