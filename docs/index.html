@@ -20,8 +20,9 @@
     />
 
     <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <
     <link
-      href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Work+Sans:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&family=Spectral:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap"
       rel="stylesheet"
     />
 
@@ -43,6 +44,9 @@
         </article>
       </section>
 
+      <hr />
+
+      <!-- 🚩 Containers -->
       <section id="containers">
         <article>
           <h2>Containers</h2>
@@ -61,6 +65,9 @@
         </article>
       </section>
 
+      <hr />
+
+      <!-- 🚩 Grid -->
       <section id="grid">
         <article>
           <h2>Grid</h2>
@@ -127,6 +134,8 @@
         </article>
       </section>
 
+      <hr />
+
       <!-- 🚩 Typography -->
       <section id="typography">
         <article>
@@ -191,17 +200,21 @@
 
         <article>
           <h3>Full width buttons</h3>
-          <button class="c-button c-button--primary c-button--full">
+          <button
+            class="c-button c-button--primary c-button--full u-margin-bottom"
+          >
             Button
           </button>
           <input
-            class="c-button c-button--primary c-button--full"
+            class="c-button c-button--primary c-button--full u-margin-bottom"
             type="submit"
             value="Submit"
           />
           <a class="c-button c-button--primary c-button--full">Link</a>
         </article>
       </section>
+
+      <hr />
 
       <!-- 🚩 Forms -->
       <section id="forms">
@@ -214,7 +227,7 @@
           </p>
           <pre><code class="html">
 &lt;form>
-  &lt;div class="o-flex margin-bottom">
+  &lt;div class="o-flex u-margin-bottom">
     &lt;div class="o-flex__item o-flex__item--half">
       &lt;label for="name">Your email&lt;/label>
       &lt;input
@@ -232,7 +245,7 @@
       &lt;/select>
     &lt;/div>
   &lt;/div>
-  &lt;div class="o-flex margin-bottom">
+  &lt;div class="o-flex u-margin-bottom">
     &lt;div class="o-flex__item">
       &lt;label for="message">Message&lt;/label>
       &lt;textarea id="message">&lt;/textarea>
@@ -251,7 +264,7 @@
           </code></pre>
 
           <form>
-            <div class="o-flex margin-bottom">
+            <div class="o-flex u-margin-bottom">
               <div class="o-flex__item o-flex__item--half">
                 <label for="name">Your email</label>
                 <input
@@ -269,7 +282,7 @@
                 </select>
               </div>
             </div>
-            <div class="o-flex margin-bottom">
+            <div class="o-flex u-margin-bottom">
               <div class="o-flex__item">
                 <label for="message">Message</label>
                 <textarea id="message"></textarea>
@@ -294,7 +307,7 @@
             use <code>c-forms--error</code>.
           </p>
           <form>
-            <div class="o-flex margin-bottom">
+            <div class="o-flex u-margin-bottom">
               <div class="o-flex__item o-flex__item--half">
                 <label for="name">Your name</label>
                 <input
@@ -317,6 +330,8 @@
           </form>
         </article>
       </section>
+
+      <hr />
 
       <!-- 🚩 Tables -->
       <section id="tables">
@@ -457,6 +472,8 @@
         </article>
       </section>
 
+      <hr />
+
       <!-- 🚩 Utilities -->
       <section id="utilities">
         <article>
@@ -464,13 +481,131 @@
           <p>Framer CSS has several easy-to-use general helper classes.</p>
         </article>
         <article>
-          <h3>Striped tables</h3>
+          <h3>Responsive images</h3>
           <pre>
             <code class="html">
-&lt;table class="c-table c-table--striped">
-...
-&lt;/table>
+  &lt;img src="#" class="u-responsive-image" alt="Responsive Image">
             </code></pre>
+          <img
+            class="u-responsive-image"
+            src="https://source.unsplash.com/random"
+            class="card-img"
+          />
+        </article>
+        <article>
+          <h3>Text alignment</h3>
+          <p>Different ways of aligning text.</p>
+          <pre>
+            <code class="html">
+  &lt;p class="u-text-left">Text left&lt;/p>
+  &lt;p class="u-text-center">Text center&lt;/p>
+  &lt;p class="u-text-right">Text right&lt;/p>
+  &lt;p class="u-text-justify">Text justify&lt;/p>
+            </code></pre>
+          <p class="u-text-left"><strong>Text left</strong></p>
+          <p class="u-text-center"><strong>Text center</strong></p>
+          <p class="u-text-right"><strong>Text right</strong></p>
+          <p class="u-text-justify">
+            <strong>Text justify</strong><br />
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. In at orci
+            sapien. Nunc auctor enim nisi, vel placerat turpis sodales ac. Proin
+            faucibus posuere lacinia. Sed et justo felis. Cras semper, arcu a
+            eleifend vulputate, magna ligula mollis nibh, sed varius lectus
+            risus suscipit neque.
+          </p>
+        </article>
+        <article>
+          <h3>More utilities</h3>
+          <table class="c-table">
+            <thead>
+              <tr>
+                <th>Class</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <code>.u-margin</code>
+                </td>
+                <td>
+                  <code>margin: 1rem</code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <code>.u-margin-left</code>
+                </td>
+                <td>
+                  <code>margin-left: 1rem</code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <code>.u-margin-right</code>
+                </td>
+                <td>
+                  <code>margin-right: 1rem</code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <code>.u-margin-top</code>
+                </td>
+                <td>
+                  <code>margin-top: 1rem</code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <code>.u-margin-bottom</code>
+                </td>
+                <td>
+                  <code>margin-bottom: 1rem</code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <code>.u-padded</code>
+                </td>
+                <td>
+                  <code>padding: 1rem</code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <code>.u-padding-left</code>
+                </td>
+                <td>
+                  <code>padding-left: 1rem</code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <code>.u-padding-right</code>
+                </td>
+                <td>
+                  <code>padding-right: 1rem</code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <code>.u-padding-top</code>
+                </td>
+                <td>
+                  <code>padding-top: 1rem</code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <code>.u-padding-bottom</code>
+                </td>
+                <td>
+                  <code>padding-bottom: 1rem</code>
+                </td>
+              </tr>
+            </tbody>
+          </table>
         </article>
       </section>
 

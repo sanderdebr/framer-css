@@ -10,13 +10,16 @@ article {
   margin-bottom: 3rem;
 }
 
-xmp {
-  display: inline;
+pre {
+  display: flex;
 }
 
-.c-button {
-  margin-right: 0.25rem;
-  margin-bottom: 0.25rem;
+pre code {
+  flex-basis: 100%;
+}
+
+xmp {
+  display: inline;
 }
 
 #grid .o-flex div {

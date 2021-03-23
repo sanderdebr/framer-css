@@ -2,6 +2,63 @@
     Utilities > Helpers
     ======================================================================= */
 
-.margin-bottom {
+/*  Image
+    ======================================================================= */
+
+.u-responsive-image {
+  max-width: 100%;
+  height: auto;
+}
+
+/*  Text alignment
+    ====================================================================== */
+.u-text-left {
+  text-align: left;
+}
+
+.u-text-right {
+  text-align: right;
+}
+
+.u-text-center {
+  text-align: center;
+}
+
+.u-text-justify {
+  text-align: justify;
+}
+
+/*  Spacing
+    ======================================================================= */
+
+.u-margin {
+  margin: $spacing;
+}
+.u-margin-left {
+  margin-left: $spacing;
+}
+.u-margin-right {
+  margin-right: $spacing;
+}
+.u-margin-top {
+  margin-top: $spacing;
+}
+.u-margin-bottom {
   margin-bottom: $spacing;
+}
+
+.u-padded {
+  padding: $spacing;
+}
+.u-padding-left {
+  padding-left: $spacing;
+}
+.u-padding-right {
+  padding-right: $spacing;
+}
+.u-padding-top {
+  padding-top: $spacing;
+}
+.u-padding-bottom {
+  padding-bottom: $spacing;
 }
