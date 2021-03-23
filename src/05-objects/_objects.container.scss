@@ -12,15 +12,22 @@
   &--small {
     max-width: $small;
   }
+
   &--medium {
     max-width: $medium;
   }
+
   &--fluid {
     max-width: 100%;
   }
+
   &--flex {
     align-items: center;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+
+    @include from-mobile {
+      justify-content: space-between;
+    }
   }
 }

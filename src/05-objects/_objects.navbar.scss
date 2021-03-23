@@ -10,12 +10,16 @@ $navbar-color: map-get($colors, "snowstorm") !default;
 
 $navbar-brand-width: 4rem !default;
 $navbar-brand-transition: $transition !default;
-$navbar-brand-transition-duration: 400ms;
+$navbar-brand-transition-duration: 300ms;
+
+$navbar-toggle-fill: map-get($colors, "snowstorm") !default;
+$navbar-toggle-size: 25px !default;
 
 /*  Module
     ======================================================================= */
 
 .o-navbar {
+  z-index: 1;
   background: $navbar-bg;
   color: $navbar-color;
   left: 0;
@@ -38,12 +42,41 @@ $navbar-brand-transition-duration: 400ms;
 }
 
 .o-navbar__nav {
+  position: absolute;
   display: flex;
+  flex-direction: column;
+  width: 100vw;
+  height: 100%;
   list-style: none;
   margin: 0;
   padding: 0;
 
   li {
     padding: 0 $spacing;
+  }
+
+  @include from-mobile {
+    position: relative;
+    flex-direction: row;
+    width: auto;
+    height: auto;
+  }
+}
+
+.o-navbar__toggle {
+  position: absolute;
+  right: $navbar-toggle-size;
+  width: $navbar-toggle-size;
+  height: auto;
+  cursor: pointer;
+
+  svg {
+    fill: $navbar-toggle-fill;
+    width: $navbar-toggle-size;
+    height: $navbar-toggle-size;
+  }
+
+  @include from-mobile {
+    display: none;
   }
 }

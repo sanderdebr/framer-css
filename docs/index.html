@@ -41,15 +41,20 @@
           </div>
 
           <ul class="o-navbar__nav">
-              <li><a href="#getting-started">Get Started</a></li>
-              <li><a href="#containers">Container</a></li>
-              <li><a href="#grid">Grid</a></li>
+              <li><a href="#getting-started">Geting Started</a></li>
+              <li><a href="#layout">Layout</a></li>
+              <li><a href="#components">Components</a></li>
               <li><a href="#typography">Typography</a></li>
-              <li><a href="#buttons">Buttons</a></li>
-              <li><a href="#forms">Forms</a></li>
-              <li><a href="#tables">Tables</a></li>
               <li><a href="#utilities">Utilities</a></li>
           </ul>
+
+          <div class="o-navbar__toggle">
+            <svg viewBox="0 0 100 80">
+              <rect width="100" height="15"></rect>
+              <rect y="30" width="100" height="15"></rect>
+              <rect y="60" width="100" height="15"></rect>
+            </svg>
+          </div>
       </div>
   </nav>
 
@@ -70,10 +75,16 @@
 
       <hr />
 
-      <!-- 🚩 Containers -->
-      <section id="containers">
+      <!-- 🚩 Layout -->
+      <section id="layout">
         <article>
-          <h2>Containers</h2>
+          <h2>Layout</h2>
+          <p>
+            Apply our fully responsive fluid grid system and panels, common layout parts like blog articles and comments and useful utility classes.
+          </p>
+        </article>
+        <article>
+          <h3>Containers</h3>
           <p>
             There are three container sizes for content that are centered with
             left and right padding. Content without a container will span the
@@ -130,14 +141,9 @@
             </tbody>
           </table>
         </article>
-      </section>
 
-      <hr />
-
-      <!-- 🚩 Grid -->
-      <section id="grid">
         <article>
-          <h2>Grid</h2>
+          <h3>Grid</h3>
           <p>
             Simple flex grid system with built-in gutter. For sizes, .half,
             .one-fourth, .three-fourths, .one-third, and .two-thirds classes are
@@ -203,26 +209,38 @@
 
       <hr />
 
-      <!-- 🚩 Typography -->
-      <section id="typography">
+      <!-- 🚩 Components -->
+      <section id="components">
         <article>
-          <h2>Typography</h2>
+          <h2>Components</h2>
           <p>
-            The font size is set to 1rem on the html element, so all font sizing
-            will cascade from the root.
+            Easy-to-use components.
           </p>
-          <h1>Heading 1</h1>
-          <h2>Heading 2</h2>
-          <h3>Heading 3</h3>
-          <h4>Heading 4</h4>
-          <h5>Heading 5</h5>
-          <h6>Heading 6</h6>
         </article>
-      </section>
-
-      <section id="buttons">
         <article>
-          <h2>Buttons</h2>
+          <h3>Navbar</h3>
+          <pre>
+          <code class="html">
+  &lt;nav id="navbar" class="o-navbar o-navbar--sticky">
+      &lt;div class="o-container o-container--medium o-container--flex">
+          &lt;div class="o-navbar__brand">
+            &lt;a href="#">
+              &lt;img id="logo" class="u-responsive-image" src="" alt="">
+            &lt;/a>
+          &lt;/div>
+          &lt;ul class="o-navbar__nav">
+              &lt;li>&lt;a href="#getting-started">Get Started&lt;/a>&lt;/li>
+              &lt;li>&lt;a href="#containers">Containers&lt;/a>&lt;/li>
+              &lt;li>&lt;a href="#grid">Grid&lt;/a>&lt;/li>
+          &lt;/ul>
+      &lt;/div>
+  &lt;/nav>
+          </code></pre>
+          <div></div>
+        </article>
+
+        <article>
+          <h3>Buttons</h3>
           <p>
             Button elements, links with a button class, and input elements
             should all render exactly the same.
@@ -244,7 +262,7 @@
         </article>
 
         <article>
-          <h3>Secondary buttons</h3>
+          <h4>Secondary buttons</h4>
           <button class="c-button c-button--secondary">Secondary button</button>
           <input
             class="c-button c-button--secondary"
@@ -255,7 +273,7 @@
         </article>
 
         <article>
-          <h3>Disabled buttons</h3>
+          <h4>Disabled buttons</h4>
           <button class="c-button c-button--disabled">Disabled button</button>
           <input
             class="c-button c-button--disabled"
@@ -266,7 +284,7 @@
         </article>
 
         <article>
-          <h3>Full width buttons</h3>
+          <h4>Full width buttons</h4>
           <button
             class="c-button c-button--primary c-button--full u-margin-bottom"
           >
@@ -278,6 +296,25 @@
             value="Submit"
           />
           <a class="c-button c-button--primary c-button--full">Link</a>
+        </article>
+      </section>
+
+      <hr />
+
+      <!-- 🚩 Typography -->
+      <section id="typography">
+        <article>
+          <h2>Typography</h2>
+          <p>
+            The font size is set to 1rem on the html element, so all font sizing
+            will cascade from the root.
+          </p>
+          <h1>Heading 1</h1>
+          <h2>Heading 2</h2>
+          <h3>Heading 3</h3>
+          <h4>Heading 4</h4>
+          <h5>Heading 5</h5>
+          <h6>Heading 6</h6>
         </article>
       </section>
 
@@ -696,21 +733,20 @@
       hljs.highlightAll();
 
       // Navbar handlers
-      const logoWidth = 100;
-      const navbarMargin = 40;
+      const logoWidth = 70;
+      const navbarMargin = 20;
 
       document.addEventListener("DOMContentLoaded", function() {
         const $navbar = document.getElementById("navbar");
-        
-        console.log($navbar.classList.contains(".o-navbar--sticky"));
 
         const $main = document.getElementById("main");
         const $logo = document.getElementById("logo");
 
         $main.style.marginTop = `${navbar.offsetHeight + navbarMargin}px`;
+        $logo.style.width = logoWidth;
 
         function handleScroll() {
-            $logo.style.width = window.scrollY === 0 ? `${logoWidth}px` : `${logoWidth * 0.3}px`;
+            $logo.style.width = window.scrollY === 0 ? `${logoWidth}px` : `${logoWidth * 0.5}px`;
         }
 
       window.addEventListener("scroll", handleScroll);

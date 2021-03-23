@@ -1,3 +1,16 @@
+/*  =======================================================================
+    Custom stylesheet overwrites Framer CSS - specifiacally for docs
+    ======================================================================= */
+:root {
+  --color-primary: #2e3440;
+  --color-secondary: #8fbcbb;
+  --color-accent: #5e81ac;
+  --color-error: #bf616a;
+  --color-success: #a3be8c;
+  --color-snowstorm: #d8dee9;
+  --color-smokewhite: #fff;
+}
+
 body {
   background: #fbfbfb;
 }
@@ -18,7 +31,16 @@ xmp {
   display: inline;
 }
 
-#grid .o-flex div {
-  background: #e5e9f0;
-  border: 1px solid #d8dee9;
+h1::before,
+h2::before {
+  content: "#";
+  color: var(--color-snowstorm);
+  position: absolute;
+  margin-left: -2.5rem;
+  width: 2.5rem;
+}
+
+#layout .o-flex div {
+  background: var(--color-snowstorm);
+  border: 1px solid var(--color-accent);
 }
