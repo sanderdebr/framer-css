@@ -8,20 +8,21 @@
 $table-spacing: $spacing;
 $table-border: map-get($colors, "snowstorm") !default;
 $table-striped-color: map-get($colors, "snowstorm") !default;
+$table-transition: $transition;
 
 /*  Module
     ======================================================================= */
 
 .c-table {
-  width: 100%;
-  border-spacing: 0;
   border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
 
   th,
   td {
-    text-align: left;
-    padding: $table-spacing;
     border-bottom: 1px solid $table-border;
+    padding: $table-spacing;
+    text-align: left;
   }
 
   th {
@@ -29,6 +30,14 @@ $table-striped-color: map-get($colors, "snowstorm") !default;
   }
 
   &--striped tbody tr:nth-child(odd) {
-    background-color: lighten($table-striped-color, 10%);
+    background-color: $table-striped-color;
+  }
+
+  &--hoverable tbody tr {
+    cursor: pointer;
+    transition: $table-transition;
+    &:hover {
+      background-color: $table-striped-color;
+    }
   }
 }

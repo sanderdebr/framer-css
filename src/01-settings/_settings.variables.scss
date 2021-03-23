@@ -29,7 +29,7 @@ $colors: (
   error: #bf616a,
   success: #a3be8c,
   snowstorm: #d8dee9,
-  smokewhite: #ffffff,
+  smokewhite: #fff,
 ) !default;
 
 /*  Typography
@@ -55,7 +55,7 @@ $spacing: 1rem !default;
 /*  Animation
     ======================================================================= */
 
-$transition: all 300ms ease-in-out !default;
+$transition: all 190ms ease-in-out !default;
 
 /*  Borders
     ======================================================================= */
