@@ -2,6 +2,22 @@
     Elements > Headings
     ======================================================================= */
 
+/*  Variables
+    ======================================================================= */
+
+$heading-font-weight: $font-weight-bold !default;
+$heading-line-height: 1.2 !default;
+
+$h1: 36px !default;
+$h2: 28px !default;
+$h3: 24px !default;
+$h4: 20px !default;
+$h5: 18px !default;
+$h6: 16px !default;
+
+/*  Module
+    ======================================================================= */
+
 h1,
 h2,
 h3,

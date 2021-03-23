@@ -2,6 +2,25 @@
     Components > Forms
     ======================================================================= */
 
+/*  Variables
+    ======================================================================= */
+
+$forms: (
+  ".c-forms, [type=color], [type=date], [type=datetime], [type=datetime-local], [type=email], [type=month], [type=number], [type=password], [type=search], [type=tel], [type=text], [type=url], [type=week], [type=time], select, textarea"
+) !default;
+
+$forms-padding: $spacing;
+$forms-transition: $transition;
+$forms-border: 1px solid $border-color !default;
+$forms-border-error: 1px solid map-get($colors, "error") !default;
+$forms-border-success: 1px solid map-get($colors, "success") !default;
+
+$forms-box-shadow-error: 0px 3px 15px map-get($colors, "error");
+$forms-box-shadow-success: 0px 3px 15px map-get($colors, "success");
+
+/*  Module
+    ======================================================================= */
+
 %c-forms {
   border: $forms-border;
   border-radius: $border-radius;
@@ -13,14 +32,12 @@
 
   &.c-forms--error {
     border: $forms-border-error;
+    box-shadow: $forms-box-shadow-error;
   }
 
   &.c-forms--success {
     border: $forms-border-success;
-  }
-
-  &:hover {
-    border-color: lighten($border-color, 50%);
+    box-shadow: $forms-box-shadow-success;
   }
 }
 

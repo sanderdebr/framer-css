@@ -20,5 +20,6 @@ xmp {
 }
 
 #grid .o-flex div {
-  border: 1px solid #0057ff;
+  background: #e5e9f0;
+  border: 1px solid #d8dee9;
 }

@@ -2,6 +2,29 @@
     Components > Button
     ======================================================================= */
 
+/*  Variables
+    ======================================================================= */
+
+$buttons: (
+  ".c-button, a.c-button, button, [type=submit], [type=reset], [type=button]"
+) !default;
+
+$button-border-radius: $border-radius-large;
+$button-padding: 1rem 1.5rem;
+$button-transition: $transition;
+
+$button-primary-background: map-get($colors, "accent") !default;
+$button-primary-color: map-get($colors, "porcelain") !default;
+
+$button-secondary-background: map-get($colors, "secondary") !default;
+$button-secondary-color: map-get($colors, "accent") !default;
+
+$button-disabled-background: map-get($colors, "fog") !default;
+$button-disabled-color: map-get($colors, "primary") !default;
+
+/*  Module
+    ======================================================================= */
+
 %c-button {
   border: 0;
   border-radius: $button-border-radius;
@@ -25,7 +48,7 @@
       &:hover,
       &:focus,
       &:active {
-        background-color: darken($button-primary-background, 17.5%);
+        background-color: darken($button-primary-background, 15%);
       }
     }
 
@@ -36,7 +59,7 @@
       &:hover,
       &:focus,
       &:active {
-        background-color: darken($button-secondary-background, 17.5%);
+        background-color: darken($button-secondary-background, 15%);
       }
     }
 

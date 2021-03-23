@@ -7,10 +7,11 @@
     <!-- External stylesheets -->
     <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.1/styles/default.min.css"
-      integrity="sha512-kZqGbhf9JTB4bVJ0G8HCkqmaPcRgo88F0dneK30yku5Y/dep7CZfCnNml2Je/sY4lBoqoksXz4PtVXS4GHSUzQ=="
+      href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.1/styles/nord.min.css"
+      integrity="sha512-igI4zzTHEU3IASS/ojMD7tO6hScqpnEnz41u+xVRNZvZEaF3XaCdre0qZ08frR1hri9+aSNeAXlQz1DS3luvxA=="
       crossorigin="anonymous"
     />
+
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
@@ -51,11 +52,11 @@
             width of the viewport.
           </p>
           <pre>
-          <code>
-  <div class="o-container">Normal</div>
-  <div class="o-container--small">Small</div>
-  <div class="o-container--medium">Medium</div>
-  <div class="o-container--fluid">Fluid</div>
+          <code class="html">
+  &lt;div class="o-container">Normal&lt;/div>
+  &lt;div class="o-container--small">Small&lt;/div>
+  &lt;div class="o-container--medium">Medium&lt;/div>
+  &lt;div class="o-container--fluid">Fluid&lt;/div>
           </code></pre>
         </article>
       </section>
@@ -69,11 +70,11 @@
             available.
           </p>
           <pre>
-          <code>
-  <div class="o-flex">
-    <div class="o-flex__item o-flex__item--half">1/2</div>
-    <div class="o-flex__item o-flex__item--half">1/2</div>
-  </div>
+          <code class="html">
+  &lt;div class="o-flex">
+    &lt;div class="o-flex__item o-flex__item--half">1/2&lt;/div>
+    &lt;div class="o-flex__item o-flex__item--half">1/2&lt;/div>
+  &lt;/div>
           </code></pre>
           <div class="o-flex">
             <div class="o-flex__item">Full width</div>
@@ -138,11 +139,11 @@
             should all render exactly the same.
           </p>
           <pre>
-            <code>
-  <button>Button</button>
-  <input type="submit" value="Submit">
-  <input type="button" value="Input">
-  <a class="button">Link</a>
+            <code class="html">
+  &lt;button>Button&lt;/button>
+  &lt;input type="submit" value="Submit">
+  &lt;input type="button" value="Input">
+  &lt;a class="button">Link&lt;/a>
             </code></pre>
           <button class="c-button c-button--primary">Primary button</button>
           <input
@@ -310,26 +311,64 @@
           <h2>Tables</h2>
           <p>
             Be sure to use properly formed table markup with
-            <code>
-              <xmp><thead></thead></xmp>
-            </code>
-            and
-            <code>
-              <xmp><tbody></tbody></xmp>
-            </code>
-            when building a table.
+            <code>&lt;thead>&lt;/thead></code> and
+            <code>&lt;tbody>&lt;/tbody></code> when building a table.
           </p>
           <pre>
-            <code>
-code
+            <code class="html">
+&lt;table class="c-table">
+  &lt;thead>
+    &lt;tr>
+      &lt;th>ID&lt;/th>
+      &lt;th>Email&lt;/th>
+      &lt;th>Username&lt;/th>
+    &lt;/tr>
+  &lt;/thead>
+  &lt;tbody>
+    &lt;tr>
+      &lt;td>1&lt;/td>
+      &lt;td>frank@test.com&lt;/td>
+      &lt;td>Frank&lt;/td>
+    &lt;/tr>
+    &lt;tr>
+      &lt;td>2&lt;/td>
+      &lt;td>petra@test.com&lt;/td>
+      &lt;td>Petra&lt;/td>
+    &lt;/tr>
+    &lt;tr>
+      &lt;td>3&lt;/td>
+      &lt;td>tom@test.com&lt;/td>
+      &lt;td>Tom&lt;/td>
+    &lt;/tr>
+  &lt;/tbody>
+&lt;/table>
             </code></pre>
-          <button class="c-button c-button--primary">Primary button</button>
-          <input
-            class="c-button c-button--primary"
-            type="submit"
-            value="Submit"
-          />
-          <a class="c-button c-button--primary">Link</a>
+          <table class="c-table">
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>Email</th>
+                <th>Username</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td>frank@test.com</td>
+                <td>Frank</td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>petra@test.com</td>
+                <td>Petra</td>
+              </tr>
+              <tr>
+                <td>3</td>
+                <td>tom@test.com</td>
+                <td>Tom</td>
+              </tr>
+            </tbody>
+          </table>
         </article>
 
         <article>
@@ -341,30 +380,6 @@ code
             value="Submit"
           />
           <a class="c-button c-button--secondary">Link</a>
-        </article>
-
-        <article>
-          <h3>Disabled buttons</h3>
-          <button class="c-button c-button--disabled">Disabled button</button>
-          <input
-            class="c-button c-button--disabled"
-            type="submit"
-            value="Submit"
-          />
-          <a class="c-button c-button--disabled">Link</a>
-        </article>
-
-        <article>
-          <h3>Full width buttons</h3>
-          <button class="c-button c-button--primary c-button--full">
-            Button
-          </button>
-          <input
-            class="c-button c-button--primary c-button--full"
-            type="submit"
-            value="Submit"
-          />
-          <a class="c-button c-button--primary c-button--full">Link</a>
         </article>
       </section>
 
