@@ -10,9 +10,9 @@ $divider-background: map-get($colors, "snowstorm") !default;
 /*  Module
         ======================================================================= */
 hr {
-  margin-top: $spacing * 3;
-  margin-bottom: $spacing * 2;
-  height: 1px;
-  border: none;
   background: $divider-background;
+  border: 0;
+  height: 1px;
+  margin-bottom: $spacing * 2;
+  margin-top: $spacing * 3;
 }

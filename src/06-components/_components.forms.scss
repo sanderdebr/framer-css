@@ -35,28 +35,28 @@ $forms-box-shadow-success-hover: 0 3px 15px map-get($colors, "success");
   &:hover {
     border-color: darken($border-color, 15%);
   }
-
-  &.c-forms--error {
-    border: $forms-border-error;
-    box-shadow: $forms-box-shadow-error;
-
-    &:hover {
-      box-shadow: $forms-box-shadow-error-hover;
-    }
-  }
-
-  &.c-forms--success {
-    border: $forms-border-success;
-    box-shadow: $forms-box-shadow-success;
-
-    &:hover {
-      box-shadow: $forms-box-shadow-success-hover;
-    }
-  }
 }
 
 @each $form in $forms {
   #{$form} {
     @extend %c-forms;
+
+    &.c-forms--error {
+      border: $forms-border-error;
+      box-shadow: $forms-box-shadow-error;
+
+      &:hover {
+        box-shadow: $forms-box-shadow-error-hover;
+      }
+    }
+
+    &.c-forms--success {
+      border: $forms-border-success;
+      box-shadow: $forms-box-shadow-success;
+
+      &:hover {
+        box-shadow: $forms-box-shadow-success-hover;
+      }
+    }
   }
 }

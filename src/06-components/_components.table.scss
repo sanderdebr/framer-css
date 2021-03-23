@@ -28,16 +28,17 @@ $table-transition: $transition;
   th {
     border-bottom-width: 2px;
   }
+}
 
-  &--striped tbody tr:nth-child(odd) {
+.c-table--striped tbody tr:nth-child(odd) {
+  background-color: $table-striped-color;
+}
+
+.c-table--hoverable tbody tr {
+  cursor: pointer;
+  transition: $table-transition;
+
+  &:hover {
     background-color: $table-striped-color;
-  }
-
-  &--hoverable tbody tr {
-    cursor: pointer;
-    transition: $table-transition;
-    &:hover {
-      background-color: $table-striped-color;
-    }
   }
 }

@@ -5,8 +5,12 @@
 /*  Variables
     ======================================================================= */
 
-$navbar-bg: map-get($colors, "primary");
-$navbar-color: map-get($colors, "snowstorm");
+$navbar-bg: map-get($colors, "primary") !default;
+$navbar-color: map-get($colors, "snowstorm") !default;
+
+$navbar-brand-width: 4rem !default;
+$navbar-brand-transition: $transition !default;
+$navbar-brand-transition-duration: 400ms;
 
 /*  Module
     ======================================================================= */
@@ -14,4 +18,32 @@ $navbar-color: map-get($colors, "snowstorm");
 .o-navbar {
   background: $navbar-bg;
   color: $navbar-color;
+  left: 0;
+  padding: $spacing 0;
+  top: 0;
+
+  &--sticky {
+    position: fixed;
+    width: 100%;
+  }
+}
+
+.o-navbar__brand {
+  width: $navbar-brand-width;
+
+  img {
+    transition: $navbar-brand-transition;
+    transition-duration: $navbar-brand-transition-duration;
+  }
+}
+
+.o-navbar__nav {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  li {
+    padding: 0 $spacing;
+  }
 }

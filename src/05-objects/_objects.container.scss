@@ -18,4 +18,9 @@
   &--fluid {
     max-width: 100%;
   }
+  &--flex {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+  }
 }
